@@ -1,8 +1,8 @@
 // *****************************************************************************
 //
-// File:        basic-sql-database.bicep
+// File:        basic-sql-server.bicep
 //
-// Description: Creates a basic SQL Database.
+// Description: Creates a basic SQL Database Server.
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -49,9 +49,6 @@ param publicNetworkAccess string = 'Enabled'
   'Enabled'
 ])
 param restrictOutboundNetworkAccess string = 'Disabled'
-
-@description('The name of the SQL Database.')
-param sqlDatabaseName string
 
 @description('The name of the SQL Server.')
 param sqlServerName string

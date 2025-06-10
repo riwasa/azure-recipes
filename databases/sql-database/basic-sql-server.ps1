@@ -1,8 +1,8 @@
 # *****************************************************************************
 #
-# File:        basic-sql-database.ps1
+# File:        basic-sql-server.ps1
 #
-# Description: Creates a basic SQL Database.
+# Description: Creates a basic SQL Database Server.
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -17,7 +17,6 @@
 # Get script variables.
 $location = "<region>"
 $resourceGroupName = "<resource-group-name>"
-$sqlDatabaseName = "<sql-database-name>"
 $sqlServerName = "<sql-server-name>"
 
 # Get the user principal name for the administrator.
@@ -66,5 +65,4 @@ az deployment group create `
                entraAdminObjectId=$entraAdminObjectId `
                entraAdminPrincipalType=$entraAdminPrincipalType `
                location=$location `
-               sqlDatabaseName="$sqlDatabaseName" `
                sqlServerName="$sqlServerName"
