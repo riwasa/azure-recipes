@@ -51,14 +51,14 @@ if ($confirmation -eq 'y' -or $confirmation -eq 'Y' -or $confirmation -eq '') {
     $addClientIPToFirewall = $true
 }
 
-# Create a SQL Database.
-Write-Host "Creating a SQL Database"
+# Create a SQL Database Server.
+Write-Host "Creating a SQL Database Server"
 
 az deployment group create `
   --name "sql-database" `
   --resource-group "$resourceGroupName" `
-  --template-file "basic-sql-database.bicep" `
-  --parameters "basic-sql-database.parameters.json" `
+  --template-file "basic-sql-server.bicep" `
+  --parameters "basic-sql-server.parameters.json" `
   --parameters addClientIPToFirewall=$addClientIPToFirewall `
                clientIPAddress=$clientIPAddress `
                entraAdminDisplayName=$administratorUPN `
