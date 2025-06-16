@@ -15,13 +15,9 @@
 # *****************************************************************************
 
 # Get script variables.
-# $location = "<region>"
-# $resourceGroupName = "<resource-group-name>"
-# $translatorName = "<translator-name>"
-
-$location = "eastus2"
-$resourceGroupName = "rim-demo"
-$translatorName = "rim-demo-trsl-trsl"
+$location = "<region>"
+$resourceGroupName = "<resource-group-name>"
+$translatorName = "<translator-name>"
 
 # Create an Azure AI Translator Account.
 Write-Host "Creating an Azure AI Translator Account"
