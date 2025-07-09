@@ -42,7 +42,7 @@ To perform custom translation behind a private endpoint, the following are requi
 
 The diagram below illustrates the resources involved in this scenario.
 
-<img src="docs/foundry-translator-architecture.png" width="50%" height="50%" alt="Foundry Translator Architecture">
+![Foundry Translator Architecture](docs/foundry-translator-architecture.png)
 
 An Azure AI Foundry resource provides access to the translator APIs and functionality, including custom translation.
 This resource is secured behind a private endpoint.
@@ -74,16 +74,16 @@ To manually setup resources, you will need access to the Azure portal (https://p
 1. In the Azure portal, in the search bar at the top of the page, enter "ai foundry". In the 
    search results that are returned, under "Services", select "Azure AI Foundry".
 
-   <img src="docs/01-ai-foundry.png" width="50%" height="50%" alt="Search for AI Foundry">
+   ![Search for AI Foundry](docs/01-ai-foundry.png)
 
 2. In the "AI Foundry" blade, in the left menu, expand the "Use with AI Foundry" section and
    select "AI Foundry".
 
-   <img src="docs/02-ai-foundry.png" width="50%" height="50%" alt="Select AI Foundry">
+   ![Select AI Foundry](docs/02-ai-foundry.png)
 
 3. Select the "Create" button to start creating a new Azure AI Foundry resource.
 
-   <img src="docs/03-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry">
+   ![Create AI Foundry](docs/03-ai-foundry.png)
 
 4. Complete the "Basics" tab by:
      - Selecting the appropriate Subscription in the "Subscription" field.
@@ -95,14 +95,14 @@ To manually setup resources, you will need access to the Azure portal (https://p
 
    Select the "Next" button to proceed.
 
-   <img src="docs/04-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry Basics">
+   ![Create AI Foundry Basics](docs/04-ai-foundry.png)
 
 5. Complete the "Network" tab by:
      - Selecting "All networks". The resource will be secured in a subsequent step.
 
    Select the "Next" button to proceed.
 
-   <img src="docs/05-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry Network">
+   ![Create AI Foundry Network](docs/05-ai-foundry.png)
 
 6. Complete the "Identity" tab by:
      - Selecting the appropriate Managed Identity option. For this example, leave the default
@@ -113,7 +113,7 @@ To manually setup resources, you will need access to the Azure portal (https://p
    Note that your user will be automatically granted the "Azure AI User" role. Any other users
    that will be using the Azure AI Foundry resource should be granted the same role.
 
-   <img src="docs/06-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry Identity">
+   ![Create AI Foundry Identity](docs/06-ai-foundry.png)
 
 7. Complete the "Encryption" tab by:
      - Selecting the "Encrypt data using a customer-managed key" field if desired. For this
@@ -121,29 +121,29 @@ To manually setup resources, you will need access to the Azure portal (https://p
 
    Select the "Next" button to proceed. 
 
-   <img src="docs/07-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry Encryption">
+   ![Create AI Foundry Encryption](docs/07-ai-foundry.png)
 
 8. Complete the "Tags" tab by:
      - Adding any desired resource tags.
 
    Select the "Next" button to proceed.
 
-   <img src="docs/08-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry Tags">
+   ![Create AI Foundry Tags](docs/08-ai-foundry.png)
 
 9. Complete the process on the "Review + submit" tab by:
      - Selecting the "Create" button to create the resource.
 
-   <img src="docs/09-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry Finish">
+   ![Create AI Foundry Finish](docs/09-ai-foundry.png)
 
 10. Once the deployment is complete, select the "Go to resource" button to open the resource blade.
     
-    <img src="docs/10-ai-foundry.png" width="50%" height="50%" alt="Create AI Foundry Finish">
+    ![Create AI Foundry Finish](docs/10-ai-foundry.png)
 
 11. In the Azure AI Foundry resource blade, in the left menu, under "Resource Management", select
     "Networking". Then select the "Private endpoint connections" tab, then select the "+ Private
     Endpoint" button.
 
-    <img src="docs/11-private-endpoint.png" width="50%" height="50%" alt="Create Private Endpoint">
+    ![Create Private Endpoint](docs/11-private-endpoint.png)
 
 12. Complete the "Basics" tab by:
      - Selecting the appropriate Subscription in the "Subscription" field.
@@ -154,7 +154,7 @@ To manually setup resources, you will need access to the Azure portal (https://p
 
     Select the "Next" button to proceed.
 
-    <img src="docs/12-private-endpoint.png" width="50%" height="50%" alt="Create Private Endpoint Basics">
+    ![Create Private Endpoint Basics](docs/12-private-endpoint.png)
 
 
 13. Complete the "Resource" tab by:
@@ -162,7 +162,7 @@ To manually setup resources, you will need access to the Azure portal (https://p
 
     Select the "Next" button to proceed.
 
-    <img src="docs/13-private-endpoint.png" width="50%" height="50%" alt="Create Private Endpoint Resource">
+    ![Create Private Endpoint Resource](docs/13-private-endpoint.png)
 
 14. Complete the "Virtual Network" tab by:
       - Select the appropriate VNet in the "Virtual network" field.
@@ -171,7 +171,7 @@ To manually setup resources, you will need access to the Azure portal (https://p
     
     Select the "Next" button to proceed.
 
-    <img src="docs/14-private-endpoint.png" width="50%" height="50%" alt="Create Private Endpoint Network">
+    ![Create Private Endpoint Network](docs/14-private-endpoint.png)
 
 15. Complete the "DNS" tab by:
       - Select "Yes" for the "Integrate with private DNS zone" field.
@@ -185,24 +185,24 @@ To manually setup resources, you will need access to the Azure portal (https://p
 
     Select the "Next" button to proceed.
 
-    <img src="docs/15-private-endpoint.png" width="50%" height="50%" alt="Create Private Endpoint Network">
+    ![Create Private Endpoint Network](docs/15-private-endpoint.png)
 
 16. Complete the "Tags" tab by:
       - Adding any desired resource tags.
 
     Select the "Next" button to proceed.
 
-    <img src="docs/16-private-endpoint.png" width="50%" height="50%" alt="Create Private Endpoint Tags">
+    ![Create Private Endpoint Tags](docs/16-private-endpoint.png)
 
 17. Complete the process on the "Review + submit" tab by:
      - Selecting the "Create" button to create the resource.
 
-    <img src="docs/17-private-endpoint.png" width="50%" height="50%" alt="Create Private Endpoint Finish">
+    ![Create Private Endpoint Finish](docs/17-private-endpoint.png)
 
 18. Once the deployment is complete, don't select the "Go to resource" button. Instead, open the Azure
     AI Foundry resource.
     
-    <img src="docs/18-private-endpoint.png" width="50%" height="50%" alt="Create AI Foundry Finish">
+    ![Create AI Foundry Finish](docs/18-private-endpoint.png)
 
 19. In the Azure AI Foundry blade, in the left menu, under "Resource Management", select "Networking". 
     Select the "Firewalls and virtual networks" tab. In the "Allow access from" field, select "Disabled".
@@ -213,7 +213,7 @@ To manually setup resources, you will need access to the Azure portal (https://p
     Note that it make take a few minutes for the changes to take effect and the resource to block any 
     public access.
 
-    <img src="docs/19-private-endpoint.png" width="50%" height="50%" alt="Create AI Foundry Network Lockdown">
+    ![Create AI Foundry Network Lockdown](docs/19-private-endpoint.png)
 
 At this point, the Azure AI Foundry resource has been set up. Skip to the "Azure AI Foundry Portal" section of this
 document.
@@ -256,21 +256,21 @@ To create a custom translator model, use the Azure AI Foundry portal.
 2. Select the "Azure AI Foundry" icon at the top left of the portal to go to the homepage. Select
    the "View all resources" link.
 
-   <img src="docs/20-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Homepage">
+   ![AI Foundry Portal Homepage](docs/20-foundry-portal.png)
 
 3. Search for the Azure AI Foundry Project you previously created and select the name of the project
    to open it.
 
-   <img src="docs/21-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Resources">
+   ![AI Foundry Portal Resources](docs/21-foundry-portal.png)
 
 4. In the left menu of the project, under "Build and customize", select "Fine-tuning". Select the
    "AI Service fine-tuning" tab. Select the "+ Fine-tune" button.
 
-   <img src="docs/22-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Fine Tuning">
+   ![AI Foundry Portal Fine Tuning](docs/22-foundry-portal.png)
 
 5. In the "Create service fine-tuning" window, select "Translation" and select the "Next" button.
 
-   <img src="docs/23-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Fine Tuning Task">
+   ![AI Foundry Portal Fine Tuning Task](docs/23-foundry-portal.png)
 
 6. Complete the following:
      - Enter a name for the task in the "Language pair name" field.
@@ -282,59 +282,60 @@ To create a custom translator model, use the Azure AI Foundry portal.
   
    Select the "Create" button to create the task.
 
-   <img src="docs/24-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Fine Tuning Task">
+
+   ![AI Foundry Portal Fine Tuning Task](docs/24-foundry-portal.png)
 
 7. Once the task has been created, you should be in the "Manage Data" blade. Select the "+ Add Data" button.
 
-   <img src="docs/25-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Docs">
+   ![AI Foundry Portal Docs](docs/25-foundry-portal.png)
 
 8. Much as you would in the Custom Translator portal, you can select the type of files you are uploading,
    and the format they are in. You can then upload the specific training files from your computer, provide
    a name for the document set, and then select the "Add" button.
 
-   <img src="docs/26-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Docs Upload">
+   ![AI Foundry Portal Docs Upload](docs/26-foundry-portal.png)
 
 9. If successfully uploaded, the document set should appear in the Document List.
 
-   <img src="docs/27-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Docs List">
+   ![AI Foundry Portal Docs List](docs/27-foundry-portal.png)
 
    Repeat steps 8 and 9 for any additional training documents that are required.
 
 10. Select the "Train model" menu option, then select the "+ Create Model" button.
 
-    <img src="docs/28-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Docs List">
+    ![AI Foundry Portal Docs List](docs/28-foundry-portal.png)
 
 11. Enter a name in the "Model name" field. Select the type of training to be performed (e.g. full or  
     dictionary-only) in the "Training type" field. Select the "Next" button to continue.
 
-    <img src="docs/29-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Train">
+    ![AI Foundry Portal Train](docs/29-foundry-portal.png)
 
 12. Select the document set(s) to use for training and select the "Next" button to continue.
 
-    <img src="docs/30-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Train Docs">
+    ![AI Foundry Portal Train Docs](docs/30-foundry-portal.png)
 
 13. Select the "Train model" button to start the training.
 
-    <img src="docs/31-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Train Start">
+    ![AI Foundry Portal Train Start](docs/31-foundry-portal.png)
 
 14. You can refresh the "Train Model" blade to monitor the status of the training. The status should change to
     "Training succeeded" once training is complete.
 
-    <img src="docs/32-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Train Status">
+    ![AI Foundry Portal Train Status](docs/32-foundry-portal.png)
 
 15. Select the "Deploy model" menu option, select the trained model that should be deployed, then select
     the "Deploy Model" button.
 
-    <img src="docs/33-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Deploy">
+    ![AI Foundry Portal Deploy](docs/33-foundry-portal.png)
 
 16. Select one or more regions to deploy the model to. Select the "Deploy model" button.
 
-    <img src="docs/34-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Deploy Regions">
+    ![AI Foundry Portal Deploy Regions](docs/34-foundry-portal.png)
 
 17. You can refresh the "Deploy Model" blade to monitor the status of the deployment. The status should
     change to "Deployed" with the region names once deployment is completed.
 
-    <img src="docs/35-foundry-portal.png" width="50%" height="50%" alt="AI Foundry Portal Deploy Regions">
+    ![AI Foundry Portal Deploy Regions](docs/35-foundry-portal.png)
 
 The deployed custom model is now available for use in performing text or document translation. Note that
 you must use the endpoint in the format
