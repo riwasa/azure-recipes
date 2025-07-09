@@ -30,7 +30,8 @@ To perform custom translation behind a private endpoint, the following are requi
       Foundry resource or a Translator resource.
     - Note that you can use Entra ID authentication when performing translations, but to
       manage, train, and deploy custom models, you must allow resource key access.
-  - Private DNS zones for privatelink.cognitiveservices.azure.com and privatelink.services.ai.azure.com.
+  - Private DNS zones for privatelink.cognitiveservices.azure.com, 
+    privatelink.openai.azure.com, and privatelink.services.ai.azure.com.
     - If you create a private endpoint in the Azure portal as part of the Azure AI Foundry resource
       creation wizard, the Cognitive Services private DNS entry will not be created 
       automatically and you must manually create it.
@@ -180,9 +181,6 @@ To manually setup resources, you will need access to the Azure portal (https://p
         - privatelink-openai-azure-com
         - privatelink-services-ai-azure-com
     
-    Note that for the translator use case, only the Cognitive Services and Services AI DNS entries are 
-    actually required.
-
     Select the "Next" button to proceed.
 
     ![Create Private Endpoint Network](docs/15-private-endpoint.png)

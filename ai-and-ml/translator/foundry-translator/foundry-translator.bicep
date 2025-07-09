@@ -93,6 +93,23 @@ resource cognitiveServicesPrivateDnsZoneVirtualNetworkLink 'Microsoft.Network/pr
   }
 }
 
+resource openAiPrivateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
+  name: 'privatelink.openai.azure.com'
+  location: 'global'
+}
+
+resource openAiPrivateDnsZoneVirtualNetworkLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
+  name: vNetName
+  parent: openAiPrivateDnsZone
+  location: 'global'
+  properties: {
+    registrationEnabled: false
+    virtualNetwork: {
+      id: vNet.id
+    }
+  }
+}
+
 resource servicesAiPrivateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
   name: 'privatelink.services.ai.azure.com'
   location: 'global'
@@ -143,6 +160,12 @@ resource privateDnsZoneGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneG
         name: 'privatelink-cognitiveservices-azure-com'
         properties: {
           privateDnsZoneId: cognitiveServicesPrivateDnsZone.id
+        }
+      }
+      {
+        name: 'privatelink-openai-azure-com'
+        properties: {
+          privateDnsZoneId: openAiPrivateDnsZone.id
         }
       }
       {
