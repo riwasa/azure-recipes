@@ -16,29 +16,20 @@
 # *****************************************************************************
 
 # Get script variables.
-# $aiFoundryName = "<ai-foundry-name>"
-# $location = "<region>"
-# $nicName = "<nic-name>"
-# $privateEndpointName = "<private-endpoint-name>"
-# $projectName = "<project-name>"
-# $resourceGroupName = "<resource-group-name>"
-# $subnetName = "<subnet-name>"
-# $vNetName = "<vnet-name>"
-
-$aiFoundryName = "rie-demo-trsl-arm-aif"
-$location = "canadacentral"
-$nicName = "rie-demo-trsl-arm-aif-nic"
-$privateEndpointName = "rie-demo-trsl-arm-aif-pe"
-$projectName = "rie-demo-trsl-arm-aif-aifp"
-$resourceGroupName = "rie-demo-trsl-arm-rg"
-$subnetName = "pe"
-$vNetName = "rie-demo-trsl-arm-vnet"
+$aiFoundryName = "<ai-foundry-name>"
+$location = "<region>"
+$nicName = "<nic-name>"
+$privateEndpointName = "<private-endpoint-name>"
+$projectName = "<project-name>"
+$resourceGroupName = "<resource-group-name>"
+$subnetName = "<subnet-name>"
+$vNetName = "<vnet-name>"
 
 # Create an AI Foundry resource.
 Write-Host "Creating an AI Foundry resource"
 
 az deployment group create `
-  --debug `
+  --verbose `
   --name "foundry" `
   --resource-group "$resourceGroupName" `
   --template-file "foundry-translator.bicep" `

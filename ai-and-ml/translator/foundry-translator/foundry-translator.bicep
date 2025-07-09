@@ -146,12 +146,6 @@ resource privateDnsZoneGroup 'Microsoft.Network/privateEndpoints/privateDnsZoneG
         }
       }
       {
-        name: 'privatelink-openai-azure-com'
-        properties: {
-          privateDnsZoneId: openAiPrivateDnsZone.id
-        }
-      }
-      {
         name: 'privatelink-services-ai-azure-com'
         properties: {
           privateDnsZoneId: servicesAiPrivateDnsZone.id
