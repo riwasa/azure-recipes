@@ -23,7 +23,7 @@ param subnetName string
 param vNetName string
 
 // Create an AI Foundry resource.
-resource aiFoundry 'Microsoft.CognitiveServices/accounts@2025-04-01-preview' = {
+resource aiFoundry 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   name: aiFoundryName
   location: location
   identity: {
@@ -38,12 +38,6 @@ resource aiFoundry 'Microsoft.CognitiveServices/accounts@2025-04-01-preview' = {
     customSubDomainName: aiFoundryName
     defaultProject: projectName
     disableLocalAuth: false
-    networkAcls: {
-      bypass: 'None'
-      defaultAction: 'Allow'
-      ipRules: []
-      virtualNetworkRules: []
-    }
     publicNetworkAccess: 'Disabled'
   }
   sku: {

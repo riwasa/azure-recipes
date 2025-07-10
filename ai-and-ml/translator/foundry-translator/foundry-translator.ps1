@@ -30,6 +30,7 @@ Write-Host "Creating an AI Foundry resource"
 
 az deployment group create `
   --verbose `
+  --debug `
   --name "foundry" `
   --resource-group "$resourceGroupName" `
   --template-file "foundry-translator.bicep" `
@@ -41,3 +42,14 @@ az deployment group create `
                projectName="$projectName" `
                subnetName="$subnetName" `
                vNetName="$vNetName" `
+
+# Update network ACLs to deny public access.
+az deployment group create `
+  --verbose `
+  --debug `
+  --name "foundry" `
+  --resource-group "$resourceGroupName" `
+  --template-file "foundry-translator-network.bicep" `
+  --parameters "foundry-translator.parameters.json" `
+  --parameters aiFoundryName="$aiFoundryName" `
+               location="$location"

@@ -243,6 +243,10 @@ Run the PowerShell file.
 
 Once the file has finished running, all the resources should be created in the Resource Group.
 
+Note that network ACLs for the Azure AI Foundry resource are updated in a separate Bicep script, to avoid 
+the error "403. Traffic is not from an approved endpoint." when trying to perform fine-tuning. This error
+appears if you set the network ACLs at the same time you create the Azure AI Foundry resource.
+
 ## Azure AI Foundry Portal
 
 To create a custom translator model, use the Azure AI Foundry portal. 
@@ -279,7 +283,6 @@ To create a custom translator model, use the Azure AI Foundry portal.
        a label to distinguish between different tasks with the same language pairing.
   
    Select the "Create" button to create the task.
-
 
    ![AI Foundry Portal Fine Tuning Task](docs/24-foundry-portal.png)
 
